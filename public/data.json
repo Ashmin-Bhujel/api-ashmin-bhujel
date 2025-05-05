@@ -1,0 +1,22 @@
+{
+  "name": "Ashmin Bhujel",
+  "id": "ashmin-bhujel",
+  "bio": "ERROR 404",
+  "links": {
+    "website": "https://ashminbhujel.com.np/",
+    "github": "https://github.com/ashmin-bhujel/",
+    "linkedin": "https://linkedin.com/in/ashmin-bhujel/",
+    "x": "https://x.com/ashmin_bhujel/"
+  },
+  "skills": {
+    "languages": ["HTML", "CSS", "JavaScript", "TypeScript", "Python"],
+    "tools": ["Git", "GitHub", "VS Code", "Linux", "Docker"],
+    "librariesAndFrameworks": [
+      "Tailwind CSS",
+      "React.js",
+      "Node.js",
+      "Express.js"
+    ],
+    "databases": ["PostgreSQL"]
+  }
+}
