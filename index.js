@@ -1,8 +1,10 @@
+import { config } from "dotenv";
 import express from "express";
 import { readFile } from "fs/promises";
 import path from "path";
 import { fileURLToPath } from "url";
 
+config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
