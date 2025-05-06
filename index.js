@@ -1,32 +1,34 @@
 import { config } from "dotenv";
 import express from "express";
-import { readFile } from "fs/promises";
 import path from "path";
-import { fileURLToPath } from "url";
 
 config();
 const app = express();
 const PORT = process.env.PORT || 5000;
+const __dirname = import.meta.dirname;
 
-// Helpers to resolve paths
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-// Serve data.json on "/"
-app.get("/", async (req, res) => {
-  const data = await readFile(
-    path.join(__dirname, "public/data.json"),
-    "utf-8"
-  );
-  res.type("application/json").send(data);
+app.get("/", (req, res) => {
+  try {
+    res.sendFile(path.join(__dirname, "public/data.json"));
+  } catch (error) {
+    console.error(`Error in route "/": ${error}`);
+    res.status(500).send({ message: "Could not get the data!" });
+  }
 });
 
-// Serve funfacts.html on "/funfacts"
 app.get("/funfacts", (req, res) => {
-  res.sendFile(path.join(__dirname, "public/funfacts.html"));
+  try {
+    res.sendFile(path.join(__dirname, "public/funfacts.html"));
+  } catch (error) {
+    console.error(`Error in route "/funfacts": ${error}`);
+    res.status(500).send({ message: "Could not get the data!" });
+  }
 });
 
-// Start the server
+app.use((req, res) => {
+  res.status(404).send({ message: "This route is not defined yet!" });
+});
+
 app.listen(PORT, () => {
   console.log("Server is running...");
 });
