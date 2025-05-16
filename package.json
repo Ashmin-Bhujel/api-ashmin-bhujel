@@ -1,23 +1,24 @@
 {
   "name": "api-ashmin-bhujel",
   "version": "1.0.0",
-  "description": "A simple api for showing information about me (Ashmin Bhujel)",
+  "description": "A simple api for serving information about me (Ashmin Bhujel)",
   "type": "module",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
   "keywords": [
-    "api",
-    "node",
-    "ashmin bhujel",
-    "information"
+    "API",
+    "Node.js",
+    "Ashmin Bhujel",
+    "Information"
   ],
   "author": "Ashmin Bhujel",
   "license": "ISC",
   "packageManager": "pnpm@10.8.1",
   "dependencies": {
     "dotenv": "^16.5.0",
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "cors": "^2.8.5"
   }
 }
