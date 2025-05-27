@@ -17,6 +17,6 @@
       "Node.js",
       "Express.js"
     ],
-    "databases": ["PostgreSQL"]
+    "databases": ["MongoDB"]
   }
 }
